@@ -1,0 +1,26 @@
+<nav class="site-nav">
+    <div class="site-nav-left">
+        {{^is "home"}}
+            {{#if @site.logo}}
+                <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+            {{else}}
+                <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
+            {{/if}}
+        {{/is}}
+        {{#if @site.navigation}}
+            {{navigation}}
+        {{/if}}
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            {{#if @site.facebook}}
+                <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+            {{/if}}
+            {{#if @site.twitter}}
+                <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+            {{/if}}
+                <a class="social-link social-link-ig fa-instagram" href="https://www.instagram.com/my_tiny_way" title="Instagram" target="_blank" rel="noopener">{{> "icons/instagram"}}</a>
+                <a class="social-link social-link-ig fa-pinterest" href="https://www.pinterest.com/My_Tiny_Way/" title="Pinterest" target="_blank" rel="noopener">{{> "icons/pinterest"}}</a>			
+        </div>
+    </div>
+</nav>
